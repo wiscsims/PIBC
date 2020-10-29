@@ -1,0 +1,3 @@
+[submodule "modules/WorldFileTool"]
+	path = modules/WorldFileTool
+	url = https://github.com/saburo/WorldFileTool.git
