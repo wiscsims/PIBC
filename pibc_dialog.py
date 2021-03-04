@@ -28,8 +28,7 @@ from PyQt5 import uic
 from PyQt5 import QtWidgets
 
 # This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer
-FORM_CLASS, _ = uic.loadUiType(os.path.join(
-    os.path.dirname(__file__), 'pibc_dialog_base.ui'))
+FORM_CLASS, _ = uic.loadUiType(os.path.join(os.path.dirname(__file__), 'pibc_dialog_base.ui'))
 
 
 class PlaceImageByCoordinatesDialog(QtWidgets.QDialog, FORM_CLASS):
@@ -47,7 +46,6 @@ class PlaceImageByCoordinatesDialog(QtWidgets.QDialog, FORM_CLASS):
         self.Btn_Box.button(self.Btn_Box.Ok).setEnabled(False)
 
     def set_instruments(self, instruments):
-        print(instruments.sort())
         self.Cmb_Instrument.addItems(map(lambda x: x.replace('_', ' '), instruments))
 
     def connect_ui(self):
@@ -58,19 +56,19 @@ class PlaceImageByCoordinatesDialog(QtWidgets.QDialog, FORM_CLASS):
         self.Txt_Image_Dir.textChanged.connect(self.update_button_status)
 
     def select_image_dir(self):
-        img_dir = QtWidgets.QFileDialog.getExistingDirectory(self, 
-                "Open Image Directory",
-                "~/Desktop",
-                QtWidgets.QFileDialog.ShowDirsOnly)
+        img_dir = QtWidgets.QFileDialog.getExistingDirectory(self,
+                                                             "Open Image Directory",
+                                                             "~/Desktop",
+                                                             QtWidgets.QFileDialog.ShowDirsOnly)
         self.Txt_Image_Dir.setText(img_dir)
         if self.Txt_Meta_Dir.text() == "":
             self.Txt_Meta_Dir.setText(img_dir)
 
     def select_meta_dir(self):
-        meta_dir = QtWidgets.QFileDialog.getExistingDirectory(self, 
-                "Open Meta File Directory",
-                "~/Desktop",
-                QtWidgets.QFileDialog.ShowDirsOnly)
+        meta_dir = QtWidgets.QFileDialog.getExistingDirectory(self,
+                                                              "Open Meta File Directory",
+                                                              "~/Desktop",
+                                                              QtWidgets.QFileDialog.ShowDirsOnly)
         self.Txt_Meta_Dir.setText(meta_dir)
 
     def update_button_status(self):
@@ -87,10 +85,10 @@ class PlaceImageByCoordinatesDialog(QtWidgets.QDialog, FORM_CLASS):
 
     def accept(self):
         self.res_values = {
-                'instrument': self.Cmb_Instrument.currentText().replace(' ', '_'),
-                'shiftposition': self.Cbx_To_The_Center.isChecked(),
-                'import': self.get_import_style(),
-                'image': self.Txt_Image_Dir.text(),
-                'meta': self.Txt_Meta_Dir.text()}
+            'instrument': self.Cmb_Instrument.currentText().replace(' ', '_'),
+            'shiftposition': self.Cbx_To_The_Center.isChecked(),
+            'import': self.get_import_style(),
+            'image': self.Txt_Image_Dir.text(),
+            'meta': self.Txt_Meta_Dir.text()
+        }
         self.done(1)
-
