@@ -10,14 +10,14 @@
 name=PIBC
 qgisMinimumVersion=3.0
 description=This plugin places images by coordinates
-version=0.1
-author=Kouki Kitajima
+version=1.0.0
+author=WiscSIMS (Kouki Kitajima)
 email=kitajim@wisc.edu
 
 about=Provide a brief description of the plugin and its purpose.
 
-tracker=https://github.com/saburo/PIBC
-repository=https://github.com/saburo/PIBC
+tracker=https://github.com/wiscsims/PIBC
+repository=https://github.com/wiscsims/PIBC
 # End of mandatory metadata
 
 # Recommended items:
@@ -28,7 +28,7 @@ repository=https://github.com/saburo/PIBC
 # Tags are comma separated with spaces allowed
 tags=raster, python, sem, microscope
 
-homepage=https://github.com/saburo/PIBC.git
+homepage=https://github.com/wiscsims/PIBC.git
 category=Plugins
 icon=icon.png
 # experimental flag
