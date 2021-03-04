@@ -1,5 +1,5 @@
 <RCC>
     <qresource prefix="/plugins/pibc" >
-        <file>icon.png</file>
+        <file>img/icon.png</file>
     </qresource>
 </RCC>
