@@ -33,7 +33,7 @@ Manual installation is also available.
 3. From the QGIS menu, select `Plugins` > `Manege and Install Plugins`.
    <a href="img/readme/plugin_install_menu.png" target="_blank"><img src="img/readme/plugin_install_menu.png" width="500" alt=""></a>
 
-4. Select `Intall from ZIP` and hit `...` button to select downloaded `line_profile.zip` file.
+4. Select `Intall from ZIP` and hit `...` button to select downloaded `pibc.zip` file.
    <a href="img/readme/plugin_install_zip.png" target="_blank"><img src="img/readme/plugin_install_zip.png" width="600" alt="Install PIBC from zip file"></a>
 
 5. Hit `Install Plugin` to install `PIBC`.
@@ -41,7 +41,7 @@ Manual installation is also available.
 
 ## Quick Start
 
-- Activate PIBC by clicking plugin button
+- Activate `PIBC` by clicking plugin button
 - Select instrument type
 - Select a folder for SEM images
 - Select a folder for meta files
