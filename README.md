@@ -1,6 +1,10 @@
 # PIBC (Place Images By Coordinates)
 
-A QGIS plugin to place SEM images to the QGIS canvas by their coordinates.
+A QGIS plugin to place images to the QGIS canvas by coordinates.
+
+Coordinates of image can be provided by matafile or metadata embedded in each image. You can write a definition file for your instruments to parse and provide metadata (coordinates and pixel size) to `PIBC`
+
+<img src="img/readme/PIBC_main_window.png" alt="PIBC main window">
 
 ## Requirements
 
@@ -10,7 +14,7 @@ A QGIS plugin to place SEM images to the QGIS canvas by their coordinates.
 
 There are two ways to install `PIBC`.
 
-### Install from QGIS Plugin Repository
+### 1. Install from QGIS Plugin Repository
 
 1. Open QGIS.
 
@@ -22,7 +26,7 @@ There are two ways to install `PIBC`.
 
 4. Select `Installed Plugins` to make sure `PIBC` was correctly installed. If it is not checked, click the checkbox (on the left of green puzzle piece icon) to activate the plugin. You also see `PIBC` icon in the QGIS toolbar.
 
-### Install from ZIP file
+### 2. Install from ZIP file
 
 Manual installation is also available.
 
@@ -41,13 +45,26 @@ Manual installation is also available.
 
 ## Quick Start
 
-- Activate `PIBC` by clicking plugin button
-- Select instrument type
-- Select a folder for SEM images
-- Select a folder for meta files
-- Select layer style (separated layers or virtual/single layer)
-- Click `OK` > > > > > > > 🎉
+1. Activate **`PIBC`** by clicking plugin button
+1. Select instrument type
+1. Select a folder for SEM images
+1. Select a folder for meta files
+1. Select layer style (separated layers or virtual/single layer)
+1. Click `OK` > > > > > > > 🎉
 
-## Usage
+## Features
 
 _TBU_
+
+### metadata
+
+`PIBC` reads metadata of the images which are going to be placed by metafile or embedded metadata in each image.
+
+### scale
+
+PIBC handles 1 µm as 1 map-unit in QGIS.
+
+### ToDo
+
+- [ ] Definition file for each SEM (instruments)
+- [ ] (Auto) correction of stage backlash
