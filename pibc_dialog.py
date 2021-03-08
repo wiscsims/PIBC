@@ -46,7 +46,8 @@ class PlaceImageByCoordinatesDialog(QtWidgets.QDialog, FORM_CLASS):
         self.Btn_Box.button(self.Btn_Box.Ok).setEnabled(False)
 
     def set_instruments(self, instruments):
-        self.Cmb_Instrument.addItems(map(lambda x: x.replace('_', ' '), instruments))
+        self.Cmb_Instrument.clear()
+        self.Cmb_Instrument.addItems(map(lambda x: x.replace('_', ' '), reversed(instruments)))
 
     def connect_ui(self):
         """Connect UI controls to actions"""
