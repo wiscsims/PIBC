@@ -10,7 +10,7 @@
 name=PIBC
 qgisMinimumVersion=3.0
 description=A plugin to place SEM images to the QGIS canvas by their coordinates.
-version=1.0.0
+version=1.0.1
 author=WiscSIMS (Kouki Kitajima)
 email=kitajim@wisc.edu
 
@@ -24,6 +24,7 @@ repository=https://github.com/wiscsims/PIBC
 
 # Uncomment the following line and add your changelog:
 changelog=
+    1.0.1 : fix: Hitachi S3400 module
     1.0.0 : First Release
 
 # Tags are comma separated with spaces allowed
