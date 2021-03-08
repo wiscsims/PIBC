@@ -9,12 +9,12 @@
 [general]
 name=PIBC
 qgisMinimumVersion=3.0
-description=This plugin places images by coordinates
+description=A plugin to place SEM images to the QGIS canvas by their coordinates.
 version=1.0.0
 author=WiscSIMS (Kouki Kitajima)
 email=kitajim@wisc.edu
 
-about=Provide a brief description of the plugin and its purpose.
+about=This plugin allows you to arrange images taken with a microscope or electron microscope on a canvas according to the coordinates in their metadata.
 
 tracker=https://github.com/wiscsims/PIBC
 repository=https://github.com/wiscsims/PIBC
@@ -24,9 +24,10 @@ repository=https://github.com/wiscsims/PIBC
 
 # Uncomment the following line and add your changelog:
 # changelog=
+    1.0.0 : First Release
 
 # Tags are comma separated with spaces allowed
-tags=raster, python, sem, microscope
+tags=raster, python, SEM, microscope, image, coordinates
 
 homepage=https://github.com/wiscsims/PIBC.git
 category=Plugins
