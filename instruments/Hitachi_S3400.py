@@ -1,6 +1,7 @@
 import os.path
 import re
- 
+
+
 class Hitachi_S3400:
 
     def __init__(self):
@@ -32,14 +33,24 @@ class Hitachi_S3400:
                 return None
 
             # units are micron
-            return {
-                'x': float(p.group('x')) / -1000.0,
-                'y': float(p.group('y')) / 1000.0,
+            x = float(p.group('x')) / -1000.0
+            y = float(p.group('y')) / 1000.0
+            px_x = float(p.group('pxsize')) / 1000.0
+            px_y = float(p.group('pxsize')) / 1000.0
+            w = float(p.group('width'))  # pixel
+            h = float(p.group('height'))  # pixel
+            out = {
+                'x': x - (w * px_x) / 2,
+                'y': y + (h * px_y) / 2,
                 'pixelsize': {
-                    'x': float(p.group('pxsize')) / 1000.0,
-                    'y': float(p.group('pxsize')) / 1000.0 
+                    'x': px_x,
+                    'y': px_y,
                 },
-                'w': int(p.group('width')),  # pixel
-                'h': int(p.group('height')), # pixel
+                'w': w,  # pixel
+                'h': h,  # pixel
                 'unit': 'um'
             }
+
+            print(out)
+
+            return out
