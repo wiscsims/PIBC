@@ -51,6 +51,6 @@ class Hitachi_S3400:
                 'unit': 'um'
             }
 
-            print(out)
+            # print(out)
 
             return out
