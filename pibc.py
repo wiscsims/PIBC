@@ -8,7 +8,7 @@
                               -------------------
         begin                : 2020-10-23
         git sha              : $Format:%H$
-        copyright            : (C) 2020 by Kouki Kitajima
+        copyright            : (C) 2020 by WiscSIMS (Kouki Kitajima)
         email                : kitajima@wisc.edu
  ***************************************************************************/
 
@@ -310,22 +310,6 @@ class PlaceImageByCoordinates:
                 break
             i += 1
             layer_name = f'{layer_name_original}-{i}'
-
-        # create gdal command
-        # cmd = '/Applications/QGIS3.14.app/Contents/MacOS/bin/gdalbuildvrt '
-        # cmd = 'gdalbuildvrt '
-        # cmd += '-resolution highest -r lanczos '
-        # cmd += '-input_file_list "{}" "{}"'.format(list_file_path, output_file_path)
-        #
-        # # run gdal command
-        # # os.system(cmd)
-        # import subprocess
-        # subprocess.check_output(
-        #         cmd,
-        #         stderr=subprocess.STDOUT,
-        #         shell=True)
-        # # os.system(cmd)
-        # print(cmd)
 
         # create vrt file
         gdal_options = gdal.BuildVRTOptions(
