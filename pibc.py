@@ -21,7 +21,7 @@
  *                                                                         *
  ***************************************************************************/
 """
-import os.path
+import os
 import sys
 import glob
 
@@ -101,6 +101,11 @@ class PlaceImageByCoordinates:
             callback,
             enabled_flag=True,
             add_to_menu=True,
+
+
+
+
+
             add_to_toolbar=True,
             status_tip=None,
             whats_this=None,
