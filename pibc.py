@@ -101,11 +101,6 @@ class PlaceImageByCoordinates:
             callback,
             enabled_flag=True,
             add_to_menu=True,
-
-
-
-
-
             add_to_toolbar=True,
             status_tip=None,
             whats_this=None,
@@ -296,7 +291,6 @@ class PlaceImageByCoordinates:
 
     """
     Functions
-
     """
 
     def add_virtual_layer_to_canvas(self, img_dir, imgs):
